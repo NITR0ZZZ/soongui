@@ -1,0 +1,13 @@
+if game.PlaceId == 155615604 then
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("ntz#0001 gui", "Ocean")
+local Main = Window:NewTab("Main")
+local Player = Window:NewTab("Player")
+SectionPlayerSection("Player")
+Section:NewSlider("Speed", "Changes the walkspeed", 250, 16, function(v)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+end)
+Section:NewSlider("Jump", "Changes the jumppower", 250, 50, function(w)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = w
+end)
+end
